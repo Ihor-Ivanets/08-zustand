@@ -1,11 +1,8 @@
-"use client";
 import { Metadata } from "next";
 import css from "./Home.module.css";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "404 — Page Not Found | NoteHub",
@@ -28,13 +25,6 @@ export const metadata: Metadata = {
 };
 
 function NotFound() {
-  const router = useRouter();
-
-  useEffect(() => {
-    const timer = setTimeout(() => router.push("/"), 3000);
-    return () => clearTimeout(timer);
-  }, [router]);
-
   return (
     <>
       <h1 className={css.title}>404 - Page not found</h1>
