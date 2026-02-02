@@ -46,7 +46,7 @@ function NotesClient({ tag }: NotesClientProps) {
           />
         )}
         <Link
-          href={"/notes/actions/create"}
+          href={"/notes/action/create"}
           aria-label="Create note"
           className={css.button}
         >
