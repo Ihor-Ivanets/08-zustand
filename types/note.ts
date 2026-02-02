@@ -6,3 +6,9 @@ export interface Note {
   updatedAt: string;
   tag: string;
 }
+
+export interface CreateNotePayload {
+  title: string;
+  content: string;
+  tag: "Work" | "Personal" | "Meeting" | "Shopping" | "Todo";
+}
